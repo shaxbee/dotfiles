@@ -1,0 +1,1 @@
+zstyle ':zprezto:module:prompt' theme 'agnoster'

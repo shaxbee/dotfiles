@@ -1,0 +1,9 @@
+[".zprezto"]
+	type = "git-repo"
+	url = "https://github.com/sorin-ionescu/prezto.git"
+	refreshPeriod = "24h"
+
+[".zprezto/modules/prompt/external/agnoster"]
+	type = "git-repo"
+	url = "https://github.com/agnoster/agnoster-zsh-theme.git"
+	refreshPeriod = "168h"
