@@ -1,3 +1,10 @@
 {{ if eq .chezmoi.os "darwin" -}}
-eval $(/opt/homebrew/bin/brew shellenv)
-{{ end }}
+_brew="/opt/homebrew/bin/brew"
+if [ -x "${_brew}" ]; then
+    eval $(${_brew} shellenv)
+fi
+{{ end -}}
+
+if (( $+commands[go] )); then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
