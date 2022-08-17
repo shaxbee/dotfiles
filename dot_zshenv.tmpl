@@ -1,0 +1,10 @@
+export ZDOTDIR="${HOME}/.zprezto"
+
+{{ if eq .chezmoi.os "Darwin" }}
+_homebrew_path="/opt/homebrew"
+if [ -d "${_homebrew_path}" ]; then
+    export PATH="${homebrew_path}/bin:${homebrew_path}/sbin:${PATH}"
+fi
+{{ end}}
+
+source "${ZDOTDIR}/runcoms/zshenv"
