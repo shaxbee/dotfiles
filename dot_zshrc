@@ -9,7 +9,3 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
-if (( $+commands[brew] )); then
-  source "$(brew --prefix asdf)/libexec/asdf.sh"
-fi

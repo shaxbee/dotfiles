@@ -1,7 +1,12 @@
 {{ if eq .chezmoi.os "darwin" -}}
 _brew="/opt/homebrew/bin/brew"
 if [ -x "${_brew}" ]; then
-    eval $(${_brew} shellenv)
+  eval $(${_brew} shellenv)
+
+  _asdf_root="$(brew --prefix asdf)"
+  if [ "${_asdf_root}" != "" ]; then
+    source "${_asdf_root}/libexec/asdf.sh"
+  fi
 fi
 {{ end -}}
 
